@@ -1,6 +1,4 @@
 import time
-from django.shortcuts import render
-from selenium.webdriver.chrome import options
 import discord
 from discord.ext import commands
 from discord import guild
@@ -19,9 +17,6 @@ slash = SlashCommand(client, sync_commands=True)
 async def on_ready():
     print('目前登入身份：',client.user)
 
-def abc():
-    return "abc"
-a = abc()
 @slash.slash(
     name="Search_orb_price",
     description = "Price",
@@ -63,4 +58,4 @@ async def Search_orb_price(ctx: SlashContext, option:str):
     await ctx.send('``` {} [{}] [{}] {} [{}] [{}] \n {} [{}] [{}] {} [{}] [{}] ```'.format(poeprice[0],poeprice[1],poeprice[2],poeprice[3],poeprice[4],poeprice[5],poeprice[6],poeprice[7],poeprice[8],poeprice[9],poeprice[10],poeprice[11]))
 
 
-client.run("ODk5OTAxNjE3Mjg4MTUxMDgw.YW5gsA.mtxLyzLwuh7BL31Gx1Zckr3asxE")
+client.run("")
